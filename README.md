@@ -1,76 +1,38 @@
-# Showcase - SvelteKit & PocketBase Application
+# create-svelte
 
-This project is being built in a series on my [YouTube Channel](https://youtube.com/@huntabyte) focused on building a full stack application with SvelteKit, PocketBase, and DaisyUI. 
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Get Started
+## Creating a project
 
-### Specific Episode Code
-<details><summary><b>Show instructions</b></summary>
+If you're seeing this, you've probably already done this step. Congrats!
 
-1. Clone the branch for that episode (replace `episode-1` with whatever episode you are looking to clone):
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-    ```sh
-    $ git clone --single-branch --branch episode-1 https://github.com/huntabyte/showcase.git
-    ```
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-2. Start PocketBase Server
+## Developing
 
-    ```sh
-    cd apps/backend
-    
-    ./pocketbase serve 
-    ```
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-3. Install Dependencies
+```bash
+npm run dev
 
-    ```sh
-    cd apps/web
-    
-    npm i
-    ```
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-4. Start Dev Server
+## Building
 
-    ```sh
-     cd apps/web
-     
-     npm run dev
-    ```
+To create a production version of your app:
 
-</details>
+```bash
+npm run build
+```
 
-### Full Project / main branch
-<details><summary><b>Show instructions</b></summary>
+You can preview the production build with `npm run preview`.
 
-1. Clone the repository:
-
-    ```sh
-    git clone https://github.com/huntabyte/showcase.git
-    ```
-
-2. Start PocketBase Server
-
-    ```sh
-    cd apps/backend
-    
-    ./pocketbase serve 
-    ```
-
-3. Install Dependencies
-
-    ```sh
-    cd apps/web
-    
-    npm i
-    ```
-
-4. Start Dev Server
-
-    ```sh
-     cd apps/web
-     
-     npm run dev
-    ```
-
-</details>
-
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
