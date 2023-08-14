@@ -14,9 +14,9 @@ export const actions = {
 		}
 
 		let username = generateUsername(formData.name.split(' ').join('')).toLowerCase();
-
+		let role = "tech"
 		try {
-			await locals.pb.collection('users').create({ username, ...formData });
+			await locals.pb.collection('users').create({ username, ...formData, role});
 			await locals.pb.collection('users').requestVerification(formData.email);
 		} catch (err) {
 			console.log('Error: ', err);

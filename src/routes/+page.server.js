@@ -5,7 +5,7 @@ export const load = ({ locals }) => {
 	const getProjects = async () => {
 		try {
 			const projects = serializeNonPOJOs(
-				await locals.pb.collection("projects").getFullList(undefined),
+				await locals.pb.collection("test").getFullList(undefined),
 			);
 			return projects;
 		} catch (err) {
